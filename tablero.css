@@ -1,0 +1,41 @@
+body { /*Selecciona todos los elementos que están dentro del "body"*/
+    background: steelblue; /*Modifica el color del fodo*/
+    color: #eee; /*Modifica el color de las letras*/
+    font-family: sans-serif; /*Modifica el estilo del texto*/
+    text-align: center; /*Centra el texto*/
+  }
+  
+  #tablero { /*Selecciona todos los elementos que están dentro del id "tablero"*/
+    margin-top: 50px; /*Se le da un margen superior con respecto a la página*/
+    background: url(http://img.freepik.com/free-photo/wooden-texture_1160-686.jpg?size=338&amp;ext=jpg); /*Se pone una imagen de un enlace como fondo*/
+    box-shadow: 0 10px 10px -6px rgba(0, 0, 0, .6); /*Le añade una sombra en la parte inferior del tablero*/
+    border-radius: 3px; /*Hace que las esquinas del tablero se vuelvan más redondas*/
+    border-collapse: collapse; /*Fusiona los bordes del tablero*/
+    height: 400px; /*Le da una altura al talero*/
+    width: 400px; /*Le da un ancho al tablero*/
+    position: absolute; /*Cambia la posición entera del tablero para que quede centrado en la página*/
+    top: 30px; /*Cambia la posición superior del tablero con respecto a la página*/
+    right: 0; /*Cambia la posición de la derecha para centrar el tablero con respecto a la página*/
+    bottom: 0; /*Cambia la posición de la parte inferior para centrar el tablero con respecto a la página*/
+    left: 0; /*Cambia la posición de la izquierda para centrar el tablero con respecto a la página*/
+    margin: auto; /*Centra el tablero horizontalmente dentro de su contenedor principal*/
+  }
+  
+  #tablero div div { /*Selecciona todos los elementos que esten dentro del hijo del div del id tablero*/
+    color: #222; /*Cambia el color de lo que este dentro del hijo del div*/
+    float: left; /*Cambia la posición a la izquierda a los hijos del div que están entro de tablero*/
+    font-size: 36px; /*Modifica el tamaño de los hijos del div que esten dentro de la etiqueta tablero*/ 
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, .6); /*Pone una sombra en distintas posiciones y especifica el color de ella a los hijos del div*/
+    width: 50px; /*Le da un ancho a los hijos del div*/
+    height: 50px; /*Le da una altura a los hijos del div*/
+  }
+  
+  #tablero div:nth-child(odd) div:nth-child(even), /*Selecciona a los hijos del div los cuadros pares de las filas impares*/
+  #tablero div:nth-child(even) div:nth-child(odd) { /*Selecciona a los hijos del div los cuadros impares de las filas pares*/
+    background: rgba(0, 0, 0, .4); /*Cambia el color de fondo a negro*/
+  }
+  
+  #tablero div:nth-child(n+7) div { /*Seleccionas a los hijos del div en este caso a los de la fila 7*/
+    color: #fff; /*Cambia el color a blanco*/
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .6); /*Añade una sombra en distintas posiciones y especifica el color de ella*/
+  }
